@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="estilo.css" rel="stylesheet">
+    <link href="form_estilo.css" rel="stylesheet">
+    <link href="formulário.css" rel="stylesheet">
+    <link rel="shortcut icon" href="Imagens/Icon Pata.png" type="image/x-icon">
+    <style>
+        .enviar {
+            display: block;
+            margin: auto;
+            background-color: #87BE4B;
+            font-size: large;
+            font-weight: bold;
+            text-align: center;
+            border: none;
+            box-shadow: none;
+            transition: background-color 0.3s, color 0.3s;
+            /* Adiciona transição suave */
+        }
+
+        .enviar:hover,
+        .enviar:focus {
+            background-color: #05668D;
+            color: aliceblue;
+            border: none;
+            box-shadow: none;
+        }
+
+        /* Estilo para o botão quando desativado */
+        .enviar:disabled {
+            background-color: #cbe6af;
+            cursor: not-allowed;
+        }
+    </style>
+    <title>Formulário de Adoção</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #05668D;">
+        <div class="container-fluid justify-content-center">
+            <a class="navbar-brand">
+                <img src="Imagens/Logo - Verde (simples).png" alt="Logo" height="64"
+                    class="d-inline-block align-text-top" style="margin-top: -5px;">
+            </a>
+        </div>
+    </nav>
+
+    <!--BARRA DE PROGRESSO DO FORMULÁRIO-->
+    <!--Indica em que ponto o adotante está do formulário. Nessa página, 75%, pois foi realizado 3/4 do formulário. A barra de progresso avançará de 25% em 25% por cento, pois são 4 páginas de perguntas-->
+    <div class="progress custom-progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75"
+            aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+    </div>
+    <!--FIM DA BARRA DE PROGRESSO-->
+    <br>
+    <main>
+        <div class="margin">
+            <div>
+                <h5>Estamos quase terminando! Agora só falta sabermos qual é o animalzinho que você deseja adotar.
+                    <br>Vamos
+                    lá escolher o seu novo companheiro?
+                </h5>
+            </div>
+            <div class="princ">
+                <div style="margin: 30px;">
+                    <form id="myform" action="adotar5.html" method="GET">
+                        <br>
+                        <div>
+                            <label class="font">Qual desses anjinhos você deseja ter como companheiro?</label>
+                            <select class="form-control custom-input" id="exampleFormControlSelect1" required>
+                                <option disabled selected>Selecione uma opção</option>
+                                <optgroup label="Cães">
+                                    <option nome="dog">BOB (macho)</option>
+                                    <option nome="dog">LULLY (fêmea)</option>
+                                    <option nome="dog">TITO (macho)</option>
+                                    <option nome="dog">QUEEN (fêmea)</option>
+                                    <option nome="dog">THOR (macho)</option>
+                                    <option nome="dog">LOLA (fêmea)</option>
+                                </optgroup>
+                                <optgroup label="Gatos">
+                                    <option nome="cat">KIKO (macho)</option>
+                                    <option nome="cat">CLEO (fêmea)</option>
+                                    <option nome="cat">TOM (macho)</option>
+                                    <option nome="cat">ZARA (fêmea)</option>
+                                    <option nome="cat">NINO (macho)</option>
+                                    <option nome="cat">MIA (fêmea)</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <br>
+                        <div>
+                            <label class="font">Por que você escolheu esse? Conta para a gente!</label>
+                            <textarea class="form-control custom-input" id="exampleFormControlTextarea1"
+                                rows="3"></textarea>
+                        </div>
+                        <br>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="nome btn btn-primary enviar" data-toggle="modal"
+                            data-target="#exampleModal" id="prosseguir">
+                            Enviar Formulário
+                        </button>
+                        <br>
+                    </form>
+
+                    
+                    <!--             Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Formulário enviado com sucesso!</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>O formulário foi enviado com sucesso! Mas é importante lembrar que isso não
+                                        significa que o animalzinho já é seu. Nossa equipe irá revisar a sua ficha com
+                                        cuidado e entrará em contato assim que possível para conversar mais sobre o
+                                        processo.</p>
+                                    <p>Também queremos que você saiba que pode haver outras pessoas interessadas no
+                                        mesmo animal, e para garantir que a adoção seja feita de forma segura e
+                                        responsável, existe uma burocracia necessária. Nosso objetivo é assegurar que o
+                                        novo membro da família tenha uma vida feliz e saudável. Agradecemos pela sua
+                                        compreensão e paciência!</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button onclick="window.location.href='adotar6.html'"
+                                        class="enviar nome btn btn-primary">Ok!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+             
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <script>
+        // Obtendo os elementos do DOM e armazenando em variáveis
+        var submitButton = document.getElementById("prosseguir");
+        var selectElement = document.getElementById("exampleFormControlSelect1");
+        var textareaElement = document.getElementById("exampleFormControlTextarea1");
+
+        // Função para verificar se o botão deve ser habilitado
+        function verificarCampos() {
+            var selectedOption = selectElement.value;
+            var textareaContent = textareaElement.value.trim();
+
+            if (selectedOption !== "Selecione uma opção" && textareaContent.length >= 100) {
+                submitButton.disabled = false;
+            } else {
+                submitButton.disabled = true;
+            }
+        }
+
+        // Adicionando eventos de input aos campos para monitorar mudanças
+        selectElement.addEventListener("change", verificarCampos);
+        textareaElement.addEventListener("input", verificarCampos);
+
+        // Inicializando o estado do botão como desabilitado
+        verificarCampos();
+
+    </script>
+</body>
+
+</html>

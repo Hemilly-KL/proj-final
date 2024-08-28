@@ -1,0 +1,50 @@
+body {
+    background-color: #05668D;
+}
+
+.botão {
+    display: block;
+    margin: auto;
+    background-color: #87BE4B;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    box-shadow: none;
+}
+
+.botão:hover {
+    background-color:#05668D;
+    color:aliceblue;
+    border: none;
+    box-shadow: none;
+}
+
+.botão:disabled {
+    background-color: #cbe6af;
+    cursor: not-allowed;
+}
+
+input.nome::placeholder {
+    color: #98b0c5;
+}
+
+label.font {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+input.nome::placeholder {
+    color: #98b0c5;
+}
+
+.princ {
+    background-color: aliceblue; 
+    margin: 0px 300px 0px 300px; 
+    border-radius: 20px;
+}
+
+h5{
+    color: aliceblue; 
+    text-align: center;
+}

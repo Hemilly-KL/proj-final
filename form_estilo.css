@@ -1,0 +1,133 @@
+.margin {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-weight: 500;
+    color: black;
+}
+
+.custom-input {
+    background-color: aliceblue;
+    color: black !important;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.custom-input:focus {
+    background-color: aliceblue;
+    color: black;
+    border: 1px solid #87BE4B;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    box-shadow: none;
+}
+
+label {
+    font-size: medium;
+}
+
+body {
+    background-color: #05668D;
+}
+
+.custom-progress {
+    height: 5px;
+}
+
+.custom-progress .progress-bar {
+    height: 100%;
+    background-color: #87BE4B;
+}
+
+ /* Esconde o botão de rádio original */
+ input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Estilo para o botão de rádio personalizado */
+input[type="radio"]+label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Cria o círculo personalizado */
+input[type="radio"]+label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #87BE4B;
+    /* Cor da borda */
+    border-radius: 50%;
+    background-color: aliceblue;
+}
+
+input[type="radio"]:checked+label:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid aliceblue;
+    background-color: #87BE4B;
+    /* Cor da bolinha */
+}
+
+/* Esconde o checkbox original */
+input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Estilo para o checkbox personalizado */
+input[type="checkbox"] + label {
+    position: relative;
+    padding-left: 30px; /* Espaço para o checkbox */
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Cria o quadrado personalizado */
+input[type="checkbox"] + label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #87BE4B; /* Cor da borda */
+    border-radius: 3px; /* Bordas arredondadas */
+    background-color: aliceblue; /* Cor de fundo padrão */
+}
+
+/* Estilo do ícone de check e fundo quando o checkbox é marcado */
+input[type="checkbox"]:checked + label:before {
+    background-color: #87BE4B; /* Fundo verde */
+    border-color: #87BE4B; /* Bordas verdes */
+}
+
+input[type="checkbox"]:checked + label:after {
+    content: "✔"; /* Símbolo de check */
+    position: absolute;
+    left: 2px;
+    top: 0;
+    font-size: 18px;
+    color: aliceblue; /* Cor do check */
+}
+
+label.font {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
